@@ -1,0 +1,26 @@
+<h1>Лист ИНН</h1>
+
+<form class="input-group mt-3" id="new-message">
+  <input type="text" class="form-control"  id="message-content" />
+  <div class="input-group-append">
+    <button class="btn btn-outline-success" type="submit">Send</button>
+  </div>
+</div>
+
+<table id = "messages">
+  <tbody>
+    <%= for inn <- @inns do %>
+      <tr>
+        <td><%= inn.date_time %></td>
+        <td><%= inn.number %></td>
+        <td>
+          <%= if inn.correctness do %>
+            корректен
+          <% else %>
+            некорректен
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
