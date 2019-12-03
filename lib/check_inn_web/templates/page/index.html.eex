@@ -1,0 +1,3 @@
+<section class="add-inn">
+  <%= render "form.html", Map.put(assigns, :action, Routes.inn_path(@conn, :create)) %>
+</section>

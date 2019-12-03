@@ -1,0 +1,13 @@
+<h1>Show Inn</h1>
+
+<ul>
+
+  <li>
+    <strong>Number:</strong>
+    <%= @inn.number %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.inn_path(@conn, :edit, @inn) %></span>
+<span><%= link "Back", to: Routes.inn_path(@conn, :index) %></span>
